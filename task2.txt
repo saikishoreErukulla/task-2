@@ -1,0 +1,6 @@
+To list all the schools to which no members are assigned, you can use the following SQL query:
+
+SELECT schools.id, schools.name
+FROM schools
+LEFT JOIN members ON schools.id = members.school_id
+WHERE members.school_id IS NULL;
